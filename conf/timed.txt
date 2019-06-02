@@ -1,0 +1,10 @@
+常用命令
+
+./kafka-server-start.sh -daemon ../config/server.properties
+./kafka-server-stop.sh
+./kafka-topics.sh --delete --topic d --zookeeper localhost:2181
+./kafka-topics.sh --list --zookeeper localhost:2181
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic project --from-beginning 
+./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic project
+
+flume-ng agent --conf-file conf/test.conf --name a1 -Dflume.root.logger=INFO,console
